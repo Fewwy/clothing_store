@@ -1,0 +1,109 @@
+.feedback {
+
+  &__background {
+    position: relative;
+    height: 448px;
+  }
+
+  &__inner {
+    @include flexible;
+    margin-bottom: 140px;
+  }
+
+  &__info {
+    max-width: 360px;
+    padding-top: 87px;
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $second-black;
+    font-weight: 400;
+  }
+
+  &__check {
+    display: flex;
+    flex-direction: column;
+    padding-top: 155px;
+    padding-right: 80px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: $second-black;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    padding-bottom: 35px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: $second-black;
+    line-height: 24px;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+
+  &__form {
+    text-align: center;
+  }
+
+  &__email {
+    @include text_main-size ($second-black);
+    opacity: 0.67;
+    padding: 15px 30px 15px 22px;
+    background-color: #E1E1E1;
+    border-radius: 23px 0 0 23px;
+    border: none;
+    outline: none;
+  }
+
+  &__button {
+    @include text_main-size ($primary-white);
+    width: 100px;
+    text-align: center;
+    background: $primary-pink;
+    padding: 15px;
+    border-radius: 0 23px 23px 0;
+    border: none;
+    letter-spacing: 0.35px;
+    outline: none;
+    margin-left: -3px;
+    cursor: pointer;
+    
+    &:hover {
+      background: $primary-white;
+      color: $primary-pink;
+      transition: 0.5s;
+    }
+  }
+}
+
+.feedback__background::after {
+  background: url(../img/sea.png) 100% 100% no-repeat;
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+}

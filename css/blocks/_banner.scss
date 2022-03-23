@@ -1,0 +1,38 @@
+.banner {
+    background: #F1E4E6;
+  
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 100vh;
+      background-image: url(../img/men_jacket.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom left -250px;
+      margin-bottom: 65px;
+      background-size: 900px;
+    }
+  
+    &__text {
+      width: 50%;
+      border-left: 12px solid $primary-pink;
+    }
+  
+    &__title {
+      font-weight: 900;
+      font-size: 48px;
+      color: $primary-black;
+      text-transform: uppercase;
+      padding-left: 16px;
+  
+    }
+  
+    &__subtitle {
+      font-weight: 700;
+      font-size: 32px;
+    }
+  
+    &__subtitle_color {
+      color: $primary-pink;
+    }
+  }

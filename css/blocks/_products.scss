@@ -1,0 +1,366 @@
+.products {
+
+  &__inner {
+    text-align: center;
+    margin: 51px 0 64px 0;
+  }
+
+  &__margin {
+    @include flexible;
+    list-style-type: none;
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-top: 96px;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $primary-black;
+    padding-bottom: 6px;
+  }
+
+  &__text {
+    @include text_main-size ($second-gray);
+    font-weight: 400;
+    padding-bottom: 57px;
+  }
+
+  &__items {
+    display: grid;
+      gap: 30px;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, 360px);
+      margin: 48px auto;
+      z-index: 1;
+  }
+
+  &__button {
+    margin-top: 19px;
+    margin-bottom: 95px;
+    padding: 14px 35px;
+
+    &:hover {
+      background: $primary-pink;
+      color: $primary-white;
+      transition: 0.5s;
+    }
+  }
+
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.products-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  & summary::marker {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 31%
+  }
+
+  &__filter {
+    @include text_main-size ($primary-white);
+    text-transform: uppercase;
+    text-align: left;
+    margin: -13px 0 0 0;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+    background: $primary-white;
+  }
+
+
+  &__title {
+    @include text_main-size (#000000);
+    padding-left: 15px;
+    padding-right: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    & summary::marker {
+      display: none;
+    }
+
+  }
+
+  &__link {
+    background: none;
+    @include text_main-size (#000000);
+    padding: 13px 0;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  &__img {
+    margin-left: 11px;
+  }
+}
+
+
+.products-filter {
+
+  &__inner {
+    padding-bottom: 13px;
+
+    ::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include text_main-size (#6f6e6e);
+    font-weight: 400;
+    text-transform: capitalize;
+    display: block;
+    background: none;
+  }
+
+  &__img {
+    margin-left: 11px;
+  }
+
+  &__details {
+    margin-top: 18px;
+    max-width: 130px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 37px;
+      background-color: #ef5b70;
+      z-index: 2;
+    }
+
+    & summary::marker {
+      display: none;
+    }
+
+    &>summary {
+      list-style: none;
+    }
+
+    &[open] summary {
+      color: $primary-pink;
+    }
+  }
+
+  &__summary {
+    border-bottom: 1px solid #ebebeb;
+    padding: 8px 0 8px 12px;
+    outline: none;
+    cursor: pointer;
+    @include text_main-size (#6f6e6e);
+    text-align: left;
+  }
+
+  &__list {
+    text-align: left;
+    padding-left: 12px;
+    padding-top: 24px;
+  }
+
+}
+
+.products-sort {
+  z-index: 49;
+
+  &__inner {
+    align-items: center;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+
+  &__title {
+    @include text_main-size ($primary-gray);
+    text-transform: uppercase;
+    padding: 0 10px 0 28px;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  &__details {
+    position: relative;
+    display: block;
+   
+
+    & summary::marker {
+      display: none;
+    }
+
+    &>summary {
+      list-style: none;
+    }
+
+    &[open] summary {
+      background: url("../img/arrow.png") right center no-repeat;
+      padding-right: 21px;
+      margin-right: 28px;
+    }
+
+    & summary {
+      background: url("../img/arrow.png") right center no-repeat;
+      padding-right: 21px;
+      margin-right: 28px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 9px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    background: $primary-white;
+    width: 120px;
+  }
+
+  &__label {
+    @include text_main-size (#6f6e6e);
+    line-height: 21px;
+    font-weight: 400;
+  }
+
+  &__input {
+    margin-right: 9px;
+  }
+
+  &__merch {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.item-products {
+
+  &__card {
+    max-width: 360px;
+    margin-bottom: 30px;
+    background: #F8F8F8;
+    position: relative;
+    transition: 0.5s;
+    text-align: left;
+
+    &:hover {
+      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__overlay {
+    @include flexible;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.83);
+    opacity: 0;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    padding-left: 18px;
+    padding-top: 25px;
+    font-size: 13px;
+    line-height: 16px;
+    color: $primary-black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__text {
+    @include text_main-size ($second-gray);
+    padding-left: 18px;
+    padding-top: 13px;
+    font-weight: 300;
+    padding-right: 30px;
+    max-width: 420px;
+  }
+
+  &__price {
+    @include text_second-size ($primary-pink);
+    padding-left: 18px;
+    margin-top: 18px;
+    padding-bottom: 20px;
+  }
+
+  &__button {
+    @include flexible;
+    outline: 1px solid $primary-white;
+    color: $primary-white;
+    background: none;
+    padding: 13px 16px 13px 13px;
+  }
+
+  &__cart {
+    fill: $primary-white;
+    margin-right: 11px;
+  }
+}
+
+.products-nav {
+
+  &_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__inner {
+    padding: 48px 0 96px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__outline {
+    outline: 1px solid #EBEBEB;
+    padding: 14px;
+  }
+
+  &__button {
+    @include text_second-size ($second-gray);
+    margin: 0 12px;
+    background: $primary-white;
+    border: none;
+    font-weight: 300;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-pink;
+      transition: 0.5s;
+    }
+  }
+
+}

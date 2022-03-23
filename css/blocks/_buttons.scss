@@ -1,0 +1,19 @@
+.button {
+    @include text_second-size (#F26376);
+    cursor: pointer;
+    outline: 1px solid #FF6A6A;
+    background: $primary-white;
+    border: none;
+  }
+
+  .link {
+    @include flexible;
+    cursor: pointer; 
+  }
+
+
+  .fas {
+    cursor: pointer;
+  }
+
+  

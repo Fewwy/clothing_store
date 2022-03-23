@@ -1,0 +1,32 @@
+.footer {
+    background: $second-black;
+  
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+    }
+  
+    &__text {
+      @include text_second-size ($second-white);
+    }
+  
+    &__item {
+      text-decoration: none;
+      fill: $primary-white; 
+
+      &:hover {
+        fill: $primary-pink;
+        transition: 0.5s;
+      }
+    }
+
+    &__icon {
+      fill: #000000;
+    }
+  }
+
+  .footer__item:hover .footer__icon {
+    fill: $primary-white;
+  }

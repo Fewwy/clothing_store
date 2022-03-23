@@ -1,0 +1,63 @@
+.content {
+
+  &__inner {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    &_long {
+      grid-column: 1/4;
+    }
+  }
+
+  &__women,
+  &__men,
+  &__kids,
+  &__accesories {
+    position: absolute;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary-pink;
+  }
+
+  &__subtitle {
+    @include text_second-size ($primary-white);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__photo {
+    filter: brightness(40%);
+    z-index: -1;
+  }
+
+}
+
+.item-content {
+
+  &__inner {
+    margin-left: 30px;
+  }
+
+  &__line {
+    width: 32%;
+  }
+}

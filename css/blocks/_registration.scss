@@ -1,0 +1,92 @@
+.registration {
+
+    &__inner {
+        @include flexible;
+        align-items: flex-start;
+        padding: 64px 0 96px 0;
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__text {
+        max-width: 360px;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #B1B1B1;
+        margin-top: -6px;
+        margin-bottom: 39px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-white;
+        background: #F16D7F;
+        padding: 16px 0 17px 29px;
+        text-transform: uppercase;
+
+        &:hover {
+            background: $primary-white;
+            color: $primary-pink;
+            transition: 0.5s;
+        }
+    }
+
+    &__arrow {
+        margin-left: 20px;
+        margin-right: 29px;
+        fill: $primary-white;
+        text-decoration: none;
+    }
+}
+
+.registration__button:hover .registration__arrow {
+   
+    fill: $primary-pink;
+}
+
+
+.advantages {
+
+    &__inner {
+        padding-left: 128px;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        text-transform: uppercase;
+        padding-bottom: 22px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding-bottom: 21px;
+    }
+
+    &__list {
+        padding-left: 30px;
+    }
+
+    &__item {
+        list-style-image: url(/img/check.png);
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding-bottom: 16px;
+        padding-left: 20px;
+    }
+}

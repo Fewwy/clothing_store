@@ -1,0 +1,118 @@
+.merch {
+
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #F7F7F7;
+    padding-bottom: 60px;
+    outline: 1px solid #EAEAEA;
+  }
+
+  &__button {
+    background: rgba(42, 42, 42, 0.15);
+    padding: 13px 17px;
+    font-size: 30px;
+    position: absolute;
+
+    &:hover {
+      color: $primary-pink;
+      transition: 0.5s;
+    }
+  }
+
+  &__button_left {
+    left: 0px;
+  }
+
+  &__button_right {
+    right: 0px;
+  }
+}
+
+.merch-card {
+
+  &__inner {
+    margin-top: -80px;
+    outline: 1px solid #EAEAEA;
+    text-align: center;
+    position: relative;
+    background: $primary-white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__category {
+    @include text_main-size (#F16D7F);
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 64px 0 27px 0;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    padding: 12px 0 48px 0;
+  }
+
+  &__text {
+    @include text_main-size (#5E5E5E);
+    max-width: 641px;
+    font-weight: 300;
+    padding: 0 10px 32px 10px;
+  }
+
+  &__price {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+    padding-bottom: 65px;
+    max-width: 641px;
+    border-bottom: 1px solid #EAEAEA;
+  }
+
+  &__button {
+    @include text_second-size (#F26376);
+    padding: 10px 50px 10px 25px;
+    font-weight: 400;
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &:hover {
+      background: $primary-pink;
+      color: $primary-white;
+      transition: 0.5s;
+    }
+  }
+
+  &__cart {
+    color: $primary-pink;
+    fill: #EF5B70;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
+}
+
+.merch-card__button:hover .merch-card__cart {
+  color: $primary-white;
+  fill: $primary-white;
+}
+
+
+.merch-sort {
+
+  &__inner {
+    padding: 65px 0 50px 0;
+  }
+}
